@@ -20,8 +20,10 @@ execute:
   echo: true
   warning: false
   message: false
+editor: 
+  markdown: 
+    wrap: 72
 ---
-
 
 ```{r}
 #| results: asis
@@ -32,5 +34,9 @@ library(Hmisc)
 latex(describe(titanic), file="")
 ```
 
-
-
+n: number of the data that has be observed \
+missing: number of missing value(NA)\
+distinct: number of distinct value \
+Info: Information Value(IV) \
+pMedian: pseudo-median \
+Gmd: Gini Mean Difference
