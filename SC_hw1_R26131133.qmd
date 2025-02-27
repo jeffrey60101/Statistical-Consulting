@@ -1,0 +1,36 @@
+---
+title: "SC_hw1"
+author: R26131133
+format:
+ pdf:
+    include-in-header:
+      - text: |
+         \usepackage{setspace,relsize}
+         \usepackage{geometry}
+         \geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+#mainfont: "Microsoft JhengHei UI"
+#mainfont: "Microsoft JhengHei"
+mainfont: "Microsoft JhengHei Bold"
+toc: false
+lang: zh-Tw
+documentclass: article
+pdf-engine: xelatex
+execute:
+  tidy: true
+  echo: true
+  warning: false
+  message: false
+---
+
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+titanic=read.csv("titanic.csv")
+library(Hmisc)
+latex(describe(titanic), file="")
+```
+
+
+
